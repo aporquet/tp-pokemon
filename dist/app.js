@@ -1,5 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var pokemon_1 = require("./pokemon");
-var evoli = new pokemon_1.Pokemon('Evoli');
-console.log(evoli);
+var attack_1 = require("./attack");
+var match_1 = require("./match");
+var sismicToss = new attack_1.Attack('Sismic Toss', 14);
+var nightShade = new attack_1.Attack('Night Shade', 19);
+var endeavour = new attack_1.Attack('Endeavour', 100);
+var evoli = new pokemon_1.Pokemon("evoli", 34, false, true, false, 100, [sismicToss, nightShade], false);
+var tadmorv = new pokemon_1.Pokemon("tadmorv", 2, false, true, false, 100, [sismicToss, nightShade], false);
+var pilePokemon = new Array();
+var combat = new match_1.Match(evoli, tadmorv, pilePokemon);
+combat.fight(evoli, tadmorv, pilePokemon);
